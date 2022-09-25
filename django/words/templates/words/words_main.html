@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+<head>
+
+<script src="{% static 'words/cropping.js'  %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.2/cropper.js"</script>
+<link href="{% static 'words/css/words.css' %}"  rel='stylesheet'> 
+</head>
+
+
+
+<body>
+
+
+
+
+<cropper-canvas class="cropper-page-div" background>
+  <cropper-image   id="dict-page"  src="{% static 'words/bin/skeat_642.jpg' %}" alt="Picture"></cropper-image>
+  <cropper-shade hidden></cropper-shade>
+  <cropper-handle action="select" plain></cropper-handle>
+  <cropper-selection initial-coverage="0.25" movable resizable zoomable>
+    <cropper-crosshair centered></cropper-crosshair>
+    <cropper-handle action="move" theme-color="rgba(255, 255, 255, 0.25)"></cropper-handle>
+    <cropper-handle action="n-resize"></cropper-handle>
+    <cropper-handle action="e-resize"></cropper-handle>
+    <cropper-handle action="s-resize"></cropper-handle>
+    <cropper-handle action="w-resize"></cropper-handle>
+    <cropper-handle action="ne-resize"></cropper-handle>
+    <cropper-handle action="nw-resize"></cropper-handle>
+    <cropper-handle action="se-resize"></cropper-handle>
+    <cropper-handle action="sw-resize"></cropper-handle>
+  </cropper-selection>
+</cropper-canvas>
+
+
+
+
+  <P>Find out about words in *Ulysses* that appear in Skeat's etymological dicitionary.  Enter a word, or a list of
+  words, space separated,
+  </P>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "words/base.html" %}
+{% block title %}Joyce's Skeat home page{% endblock %}
+{% block content %}
+"Joyce's Skeat" is an app to explore and contribute to commentary, speculation, questions etc about words in Skeat's 3rd Edition and their relation to Joyce's works.
+See [about] for more info.
+
+<form id="main_search" action={% url "search_for_one_word" %}>
+<label for="one_word">Search for a word: </label>
+<input type="text" name="sought" id="one_word" type="submit">
+<input type="submit" value="Search for">
+</submit>
+
+
+
+
+
+{% endblock %}

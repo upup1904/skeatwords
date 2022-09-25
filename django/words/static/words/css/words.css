@@ -1,0 +1,29 @@
+.dictpage {
+
+}
+
+.dictpage-container {
+    display: flex;
+}
+
+.skeat-page-div {
+
+
+}
+
+.cropper-page-div {
+    width: 600px;
+    height: 800px;
+}
+
+
+
+.skeat-page-img {
+    float: left;
+    overflow: scoll;
+}
+    
+
+.menu {
+    float: right;
+}

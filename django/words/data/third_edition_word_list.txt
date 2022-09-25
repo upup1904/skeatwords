@@ -1,0 +1,36 @@
+# this is picked up from https://archive.org/details/etymologicaldict00skea_1/
+
+discriminate 170
+discrepant 169 170
+Disavow 169
+Discern 169
+Do 174 175
+dormouse 176 177
+super 610 611
+superstition 611
+superstructure 612
+surcease 612 613
+swan 615
+swingletree 617 618
+tally 622 623
+tart 625 626
+vulpine 691
+waken 693 694
+wale 694
+waver 698 699
+whipple-tree 706 707
+blunt 68
+cameo 90
+excrement 198
+fault 204 last
+felly 205 last
+festoon 206 last
+fardingdale ooo at farthingdale
+fellor ooo at felly
+interest 298
+internecine 298 last
+fieldfare 207 last
+fin 208 last
+fitchet 209 last
+flash 210 last
+    

@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="{% static 'words/cropping.js'  %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.2/cropper.js"></script>
+<link href="{% static 'words/css/words.css' %}"  rel='stylesheet' /> 
+    <title>{% block title %}Joyce's Skeat{% endblock %}</title>
+</head>
+
+<body>
+<div id="topnav" class="nav">{% block topnav %}{% endblock %}</div>
+    <div id="side_goodies">
+        {% block goodies %}
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+<div id="bottomnav" class="nav">{% block bottomnav %}{% endblock %}</div>    
+</body>
+</html>

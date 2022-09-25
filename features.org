@@ -1,0 +1,26 @@
+*  Search for a word
+  Return a word or a page
+  Returns  the word
+
+
+*  Entry page
+  search for word |  Your  Previous Searches
+                  |  Recent annotations
+                  |  Suggestion Box
+                    
+
+* word page
+  image of definitions(s)
+  explanation of Skeat's citations
+  References in published literature
+  add a comment
+    - appreciation of the words use
+    - relevance of etymology to sense of a passage
+
+* dictionary page (fallback if word is not found)
+  "we couldnt fine {{ search_term }}, below is image of the page it would be on.
+  Please help.  If it is on this page, please clip it
+   - click  it is on the page but  I don't want to clip  it
+   - There is no keyword  for it
+   - There is no 
+  

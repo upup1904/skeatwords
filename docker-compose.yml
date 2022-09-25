@@ -1,0 +1,48 @@
+# docker-compose.yml
+
+version: '3.8'
+
+
+networks:
+  skeat_web:
+    external: true
+  internal:
+    external: false
+    driver: bridge
+
+
+services:
+  web:
+    image: skeat_django
+    build: .
+    ports:
+      - 8000:8000
+    environment:
+      - DEBUG=1
+    depends_on:
+      - skeat-db
+    networks:
+      - skeat_web
+      - internal     
+
+
+  skeat-db:
+    image: postgres:13-alpine
+    volumes:
+      - skeat_pg_data:/var/lib/postgresql/data/
+    expose:
+      - 5432
+    environment:
+     - POSTGRES_DB=${POSTGRES_DB:-postgres}
+     - POSTGRES_USER=${POSTGRES_USER:-postgres}
+     - POSTGRES_PASSWORD=${POSTRES_PASSWORD:-postgres}
+    networks:
+     - internal     
+
+
+volumes:
+  skeat_pg_data:
+
+
+
+  
