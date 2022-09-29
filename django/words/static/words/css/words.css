@@ -2,27 +2,53 @@
 
 }
 
+.twelfths-six {
+    width: 50% ;
+}
+
+.twelfths-three {
+    width: 25% ;
+}
+
+.twelfths-ten {
+    width: 83% ;
+    overflow: scroll;
+}
+
+img.dict-page {
+    width: 60% ;
+    height: auto ;
+}
+
+button.hide-until-selection-button {
+    visibility: hidden;
+}
+
+
+.dict-words-on-page {
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.dict-words-on-page-header {
+    color=blue ;
+}
+
 .dictpage-container {
+}
+
+.yes-no-radio-container {
     display: flex;
 }
 
-.skeat-page-div {
 
-
-}
 
 .cropper-page-div {
     width: 600px;
     height: 800px;
 }
 
-
-
-.skeat-page-img {
-    float: left;
-    overflow: scoll;
-}
-    
 
 .menu {
     float: right;

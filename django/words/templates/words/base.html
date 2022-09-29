@@ -2,11 +2,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css" />
     <script src="{% static 'words/cropping.js'  %}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.2/cropper.js"></script>
+<script src="https://unpkg.com/htmx.org@1.8.0" integrity="sha384-cZuAZ+ZbwkNRnrKi05G/fjBX+azI9DNOkNYysZ0I/X5ZFgsmMiBXgDZof30F5ofc" crossorigin="anonymous"></script>
 <link href="{% static 'words/css/words.css' %}"  rel='stylesheet' /> 
+{% block header-js %}{% endblock %}
+{% block header-css %}{% endblock %}
+
     <title>{% block title %}Joyce's Skeat{% endblock %}</title>
+    
 </head>
 
 <body>

@@ -2,6 +2,71 @@
 
 {% block title %}Is it here?{% endblock %}
 
+  {% block header-js %}
+    <script> function revealSubmitButton() {
+       document.getElementById('submit-word-on-page-button').classList.remove('hide-until-selection-button')
+    }
+    </script>
+
+  {% endblock %}
+
 {% block content %}
-Here is page {{ preceding_page }}.  If '{{ sought }}' is here..., do it to it
+<div class="page-container">
+
+<div class='yes-no-radio-container'>
+
+    <div class='twelfths-three'>
+       <P class='yes-no-radio-explainer'>
+       Here is page {{ page_number }}.  Check if '{{ sought }}' is on the page (only click 'Yes' if that exact uninflected spelling is there).</P>
+
+       <P class='yes-no-radio-explainer'>If you click "Yes" and submit, I'll update the database, & offer you a chance to zoom in and clip the definition, so future vistors can jump right to it.</P>
+
+    <P class='yes-no-radio-explainer'>
+    If "No", I'll mark the word as not being present in the dictionary.  You and others can still add annotations to a word not in dictionary. 
+       </P>
+    </div>
+
+    <fieldset  class='yes-no-radio-fieldset' onclick='revealSubmitButton()'>
+       <div>
+	<input type="radio" id="sought-not-present" name="word-is-in-dict" value="No" >
+	  <label for="word-is-in-dict">No</label>
+       </div>
+      <div>
+	<input type="radio" id="sought-is-present" name="word-is-in-dict" value="Yes" >
+	  <label for="word-is-in-dict">Yes</label>
+	</div>
+	<button  id='submit-word-on-page-button'
+	class='hide-until-selection-button'
+	         value='Submit'>Submit</button>	
+    </fieldset>
+
+
+
+    <div id="dict-words-on-page" class="dict-words-on-page">
+    <H3 class="dict-words-on-page-header">Words on page {{ page_number }}
+    <div id="words-on-page" hx-get="{% url 'words_on_page' page_number %}"
+    hx-trigger="load delay:3s"
+    hx-swap="outerHTML">
+    </div>
+
+
+    </div> <!-- dict-words-on-page -->
+
+
+    
+
+
+</div><!--yes-no-radio-containr -->
+
+    <div page-preview class="twelfths-ten"> <img src="{{ page_url }}"
+    class="dict-page" id="dict-page" x/> </div>
+
+
+
+
+</div> <!-- page-container -->
+
+
 {% endblock %}
+
+

@@ -21,5 +21,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name='words_index'),
     path('cropper', views.cropper_demo, name='cropper-demo'),
-    path('search', views.search_for_one_word, name='search_for_one_word')
+    path('search', views.search_for_one_word, name='search_for_one_word'),
+    path('words_on_page/<int:page_number>', views.words_on_page, name="words_on_page"),
+    path('look', views.look)
 ]
